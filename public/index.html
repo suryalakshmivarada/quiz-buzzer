@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Five Team Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- ========================= -->
+        <!-- JOIN SCREEN -->
+        <!-- ========================= -->
+
+        <section id="joinScreen" class="card">
+
+            <h1>TEAM QUIZ</h1>
+
+            <p>
+                Enter your name and choose your team
+            </p>
+
+            <input id="studentName" type="text" maxlength="40" placeholder="Enter your name" autocomplete="off">
+
+            <h3>Choose Your Team</h3>
+
+            <div class="teamChoices">
+
+                <button class="teamChoice agni" data-team="Agni">
+                    🔥
+                    <span>AGNI</span>
+                </button>
+
+                <button class="teamChoice vayu" data-team="Vayu">
+                    💨
+                    <span>VAYU</span>
+                </button>
+
+                <button class="teamChoice akash" data-team="Akash">
+                    ☁️
+                    <span>AKASH</span>
+                </button>
+
+                <button class="teamChoice jal" data-team="Jal">
+                    💧
+                    <span>JAL</span>
+                </button>
+
+                <button class="teamChoice prudhvi" data-team="Prudhvi">
+                    🌍
+                    <span>PRUDHVI</span>
+                </button>
+
+            </div>
+
+            <button id="joinButton" class="mainButton">
+                JOIN GAME
+            </button>
+
+            <p id="joinError" class="error"></p>
+
+        </section>
+
+
+        <!-- ========================= -->
+        <!-- GAME SCREEN -->
+        <!-- ========================= -->
+
+        <section id="gameScreen" class="hidden">
+
+            <div class="topBar">
+
+                <div>
+                    <strong id="myName"></strong>
+                </div>
+
+                <div>
+                    Team:
+                    <strong id="myTeam"></strong>
+                </div>
+
+            </div>
+
+
+            <div id="waiting" class="status">
+                Waiting for Sir to start the game...
+            </div>
+
+
+
+            <!-- BUZZER BUTTON -->
+
+            <div class="buzzerGrid">
+
+                <button id="buzzButton" class="buzzer">
+                    🔔
+                    BUZZ
+                </button>
+
+            </div>
+            ```
+
+
+
+            <!-- RESULT -->
+
+            <div class="resultCard">
+
+                <div id="resultTitle">
+                    WAITING
+                </div>
+
+                <div id="resultPlayer">
+                    No one has buzzed yet.
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="student.js"></script>
+
+</body>
+
+</html>

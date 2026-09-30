@@ -1,0 +1,554 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #0f172a;
+
+    color: white;
+}
+
+
+/* =====================================
+   GENERAL
+===================================== */
+
+.hidden {
+    display: none !important;
+}
+
+.page,
+.adminPage {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 25px;
+}
+
+.card,
+.adminCard {
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   JOIN PAGE
+===================================== */
+
+.card {
+    max-width: 900px;
+
+    margin:
+        50px auto;
+}
+
+h1 {
+    font-size: 42px;
+
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 17px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    margin: 10px;
+}
+
+
+/* =====================================
+   TEAM CHOICE
+===================================== */
+
+.teamChoices {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.teamChoice {
+
+    border: 4px solid transparent;
+
+    border-radius: 18px;
+
+    padding: 25px 10px;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+.teamChoice span {
+    display: block;
+
+    margin-top: 10px;
+}
+
+.teamChoice.selected {
+
+    border-color: white;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   COLORS
+===================================== */
+
+.agni {
+    background: #dc2626;
+}
+
+.vayu {
+    background: #2563eb;
+}
+
+.akash {
+    background: #7c3aed;
+}
+
+.jal {
+    background: #0891b2;
+}
+
+.prudhvi {
+    background: #16a34a;
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.mainButton {
+
+    padding: 18px 50px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #111827;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   TOP BAR
+===================================== */
+
+.topBar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    background: #1e293b;
+
+    padding: 15px 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   STATUS
+===================================== */
+
+.status {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    padding: 25px;
+
+    background: #1e293b;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   BUZZERS
+===================================== */
+
+.buzzerGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.buzzer {
+
+    border: none;
+
+    border-radius: 25px;
+
+    min-height: 230px;
+
+    color: white;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+
+.buzzer span {
+
+    display: block;
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+}
+
+.buzzer:active {
+
+    transform: scale(0.95);
+}
+
+.buzzer:disabled {
+
+    opacity: 0.25;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   RESULT
+===================================== */
+
+.resultCard {
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+#resultTitle {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+#resultPlayer {
+
+    font-size: 28px;
+}
+
+
+/* =====================================
+   ADMIN
+===================================== */
+
+.adminPage {
+
+    max-width: 1200px;
+}
+
+.bigNumber {
+
+    font-size: 60px;
+
+    font-weight: bold;
+}
+
+.adminButton {
+
+    padding: 15px 25px;
+
+    margin: 7px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.adminButton.start {
+    background: #16a34a;
+
+    color: white;
+}
+
+.adminButton.correct {
+    background: #22c55e;
+
+    color: white;
+}
+
+.adminButton.wrong {
+    background: #dc2626;
+
+    color: white;
+}
+
+.adminButton.stop {
+    background: #475569;
+
+    color: white;
+}
+
+.ready {
+    color: #4ade80;
+
+    font-weight: bold;
+}
+
+.adminMessage {
+    color: #fbbf24;
+
+    font-weight: bold;
+
+    min-height: 25px;
+}
+
+
+/* =====================================
+   TEAM COUNTS
+===================================== */
+
+.teamCounts {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 10px;
+}
+
+.teamCounts div {
+
+    padding: 20px;
+
+    background: #0f172a;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+.teamCounts strong {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   CURRENT PLAYER
+===================================== */
+
+.currentPlayer {
+
+    font-size: 35px;
+
+    padding: 25px;
+}
+
+
+/* =====================================
+   QUEUE
+===================================== */
+
+.queueItem {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    background: #0f172a;
+
+    border-radius: 10px;
+
+    margin-bottom: 8px;
+
+    text-align: left;
+}
+
+.queueNumber {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    min-width: 50px;
+}
+
+
+/* =====================================
+   STUDENTS
+===================================== */
+
+.studentRow {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px;
+
+    margin-bottom: 5px;
+
+    background: #0f172a;
+
+    border-radius: 8px;
+}
+
+.studentRow button {
+
+    background: #dc2626;
+
+    color: white;
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 800px) {
+
+    .teamChoices,
+    .buzzerGrid,
+    .teamCounts {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .buzzer {
+        min-height: 160px;
+
+        font-size: 20px;
+    }
+
+    .buzzer span {
+        font-size: 45px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .teamChoices,
+    .buzzerGrid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .topBar {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .bigNumber {
+
+        font-size: 45px;
+    }
+
+}

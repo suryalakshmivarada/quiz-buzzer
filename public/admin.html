@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Admin</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="adminPage">
+
+        <h1>QUIZ ADMIN PANEL</h1>
+
+
+        <!-- ====================== -->
+        <!-- STUDENT COUNT -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>STUDENTS</h2>
+
+            <div id="studentCount" class="bigNumber">
+                0 / 80
+            </div>
+
+            <p id="joinStatus">
+                Waiting for students...
+            </p>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- MINIMUM -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>MINIMUM STUDENTS</h2>
+
+            <input id="minimumInput" type="number" min="1" max="200" value="80">
+
+            <button id="saveMinimum" class="adminButton">
+                SAVE MINIMUM
+            </button>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- TEAM COUNTS -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>TEAM COUNTS</h2>
+
+            <div id="teamCounts" class="teamCounts"></div>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- GAME CONTROL -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>GAME CONTROL</h2>
+
+            <button id="startGame" class="adminButton start">
+                ▶ START GAME
+            </button>
+
+            <button id="resetRound" class="adminButton">
+                🔄 RESET ROUND
+            </button>
+
+            <button id="correct" class="adminButton correct">
+                ✓ CORRECT
+            </button>
+
+            <button id="wrong" class="adminButton wrong">
+                ✕ WRONG / NEXT
+            </button>
+
+            <button id="stopGame" class="adminButton stop">
+                ■ STOP GAME
+            </button>
+
+            <p id="adminMessage" class="adminMessage"></p>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- CURRENT PLAYER -->
+        <!-- ====================== -->
+
+        <section class="adminCard current">
+
+            <h2 id="currentTitle">
+                WAITING
+            </h2>
+
+            <div id="currentPlayer" class="currentPlayer">
+                No one has buzzed.
+            </div>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- BACKUP QUEUE -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>BACKUP BUZZER QUEUE</h2>
+
+            <div id="buzzQueue"></div>
+
+        </section>
+
+
+        <!-- ====================== -->
+        <!-- STUDENT LIST -->
+        <!-- ====================== -->
+
+        <section class="adminCard">
+
+            <h2>JOINED STUDENTS</h2>
+
+            <div id="studentsList"></div>
+
+        </section>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
